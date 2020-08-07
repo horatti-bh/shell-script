@@ -10,6 +10,8 @@ echo -e "hello\tword"
 echo -e "\e[33mxyz"
 echo -e "\e[34mcheking color\e[0m"
 
+echo "please check you connection 😾 "
+
 
 
 
