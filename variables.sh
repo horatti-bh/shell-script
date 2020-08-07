@@ -22,3 +22,5 @@ echo "Hello good morning date is $DATE "
 add=$((7+7+7))
 
 echo "some of all add = $add"
+
+Echo this is very to much $atti yours
