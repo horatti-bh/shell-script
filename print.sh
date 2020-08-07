@@ -1,5 +1,11 @@
 #!/bin/bash
-echo Hello BABY
+echo Hello First Command
 echo Hello Shell
+
+
+
+
+
+
 
 
