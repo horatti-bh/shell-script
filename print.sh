@@ -1,5 +1,2 @@
 #!/bin/bash
-ls
-pwd
-uname
-hostname
+echo Hello BABY
