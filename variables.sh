@@ -23,4 +23,4 @@ add=$((7+7+7))
 
 echo "some of all add = $add"
 
-Echo this is very to much $atti yours
+echo this is very to much $atti yours
