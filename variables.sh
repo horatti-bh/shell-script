@@ -16,5 +16,5 @@ c=true
 d=10.9
 e=abc123
 
-DATA=$(date +%F)
+DATE=$(date +%F)
 echo "Hello good morning date is $DATE "
