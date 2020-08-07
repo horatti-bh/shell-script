@@ -1,6 +1,6 @@
 #!/bin/bash
 
 
-MSG=Hello word
+MSG=Helloword
 echo "$MSG"
 echo ${MSG}
