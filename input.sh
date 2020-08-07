@@ -3,4 +3,4 @@
 
 read -p 'My name is:' name
 
-echo -e "MAy is $name, I hve 5+ years IT exp "
+echo -e "My name is $name, I have 5+ years of IT experince "
