@@ -19,6 +19,6 @@ e=abc123
 DATE=$(date +%F)
 echo "Hello good morning date is $DATE "
 
-add = $((7+7+7))
+add=$((7+7+7))
 
 echo "some of all add = $add"
