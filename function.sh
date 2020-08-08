@@ -1,8 +1,9 @@
 function test() {
     echo "Hello function, How are you?"
     echo "My name is $name"
-    echo "I am good to move $location"
+    location=AnyWhere
+
 }
 name=BTH
-location=AnyWhere
 test
+echo "I am good to move $location"
