@@ -4,10 +4,6 @@ function test() {
     location=AnyWhere
 
 }
-name=BTH
-test
-echo "I am good to move $location"
-
 
 test2() {
   echo "1st arguments $1"
@@ -17,4 +13,7 @@ test2() {
 
 }
 
+name=BTH
+test
+echo "I am good to move $location"
 test2 bb nummi yammi zummi
