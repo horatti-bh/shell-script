@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-Company=$1
-case company in
+company=$1
+case $company in
 Product_based)
 
 echo "will git good salary"
