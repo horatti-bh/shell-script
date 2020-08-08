@@ -10,7 +10,7 @@ test2() {
   echo "2nd arguments $2"
   echo "All arguemnts $*"
   echo "Total arguments $#"
-  retrun 77
+  return 77
 
 
 }
