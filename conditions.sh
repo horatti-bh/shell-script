@@ -3,13 +3,13 @@
 
 Company=$1
 case company in
-Product based)
+Product_based)
 
 echo "will git good salary"
 echo "less work"
 ;;
 
-service based)
+service_based)
 
 echo "work more"
 echo "shifts"
