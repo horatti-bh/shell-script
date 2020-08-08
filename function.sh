@@ -1,5 +1,4 @@
 function test() {
-    echo "Hello function, Hwo are you?"
+    echo "Hello function, How are you?"
 }
 
-test
