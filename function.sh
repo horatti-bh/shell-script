@@ -8,7 +8,7 @@ function test() {
 test2() {
   echo "1st arguments $1"
   echo "2nd arguments $2"
-  echo "ll arguemnts $*"
+  echo "All arguemnts $*"
   echo "Total arguments $#"
 
 }
