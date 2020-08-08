@@ -10,6 +10,8 @@ test2() {
   echo "2nd arguments $2"
   echo "All arguemnts $*"
   echo "Total arguments $#"
+  retrun 77
+
 
 }
 
@@ -17,3 +19,4 @@ name=BTH
 test
 echo "I am good to move $location"
 test2 bb nummi yammi zummi
+echo "exit code to $?"
