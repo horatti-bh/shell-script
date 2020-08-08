@@ -14,4 +14,7 @@ service_based)
 echo "work more"
 echo "shifts"
 ;;
+*)
+  echo "other companies i don't want"
+  exit 1
 esac
