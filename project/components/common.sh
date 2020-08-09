@@ -15,10 +15,10 @@ info() {
 STAT() {
   case $1 in
   0)
-    echo -e "[${G}SUCCESS${N} $2 "
+    echo -e "[${G}SUCCESS${N}] $2 "
     ;;
   *)
-    echo -e "[${R}ERROR${N} $2"
+    echo -e "[${R}ERROR${N}] $2"
     echo -e "\e this is wrong please refer ${LIG_FILE}"
     exit 2
     ;;
