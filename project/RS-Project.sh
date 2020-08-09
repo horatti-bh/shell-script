@@ -49,7 +49,12 @@ if [ $# -lt 1 -o $# -gt 2 ]; then
     esac
     fi
 
+case $ACTION in
+install )
+  sh components/mongodb.sh
+  uninstall|reinstall)
 
+  echo "under Developement"
 
 
 
