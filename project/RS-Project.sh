@@ -9,7 +9,7 @@ USAGE() {
     USAGE
     ;;
   *)
-    echo -e "\e[33mUsage \e[35m$0 \e[31minstall \e[34mcart|catalogue|frontend|dispatch|payment|ratings|shipping|user|rabbitMQ|mysql|redis|mongodb|all(default)\e[0m"
+    echo -e "\e[33mUsage \e[35m$0 \e[31minstall \e[34mcart|catalogue|frontend|dispatch|payment|ratings|shipping|user|rabbitMQ|mysql|redis|mongodb|\e[30mall(default)\e[0m"
 esac
 }
 
