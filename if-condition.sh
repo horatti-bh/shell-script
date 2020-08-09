@@ -20,7 +20,7 @@ if [ $# -ne 3 ]; then
 
 proccesor=$(ps -ef | grep ssh | grep -v grep | wc -l)
 
-if [ "proccesor" -gt 0 ]; then
+if [ "$proccesor" -gt 0 ]; then
 
   echo "check the proccess number Total = $proccesor "
 
