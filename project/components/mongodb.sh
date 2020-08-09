@@ -17,5 +17,5 @@ STAT $? "Finish : YUM repo Information"
 #    echo ERROR
 #    fi
  info "Start: Installing MONGODB"
-    yumm install -y mongodb-org -y &>> ${LOG_FILE}
+    yum install -y mongodb-org -y &>> ${LOG_FILE}
     STAT $? "Finish: Installing MONGODB"
