@@ -12,7 +12,7 @@ rm -rf $LOG_FILE
 info() {
   echo -e "[${B}INFO${N}] $1"
 }
-stat() {
+STAT() {
   case $1 in
   0)
     echo -e "[${G}SUCCESS${N} $2 "
