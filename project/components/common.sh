@@ -22,7 +22,7 @@ STAT() {
     ;;
   *)
     echo -e "$(timeStump) [${R}ERROR${N}] $2"
-    echo -e "\e this is wrong please refer ${LIG_FILE}"
+    echo -e "\e this is wrong please refer the log file and fix it: ${LOG_FILE}"
     exit 2
     ;;
     esac
