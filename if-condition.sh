@@ -18,11 +18,13 @@ if [ $# -ne 3 ]; then
   exit 1
    fi
 
-proccesor=$(ps -ef | grep ssh | grep -v grep | wc -l)
+proccesor=$(ps -ef | grep java | grep -v grep | wc -l)
 
 if [ "$proccesor" -gt 0 ]; then
 
   echo "check the proccess number Total = $proccesor "
+  else
+    echo "ssh is not running"
 
 
   fi
