@@ -33,7 +33,6 @@ if [ $# -lt 1 -o $# -gt 2 ]; then
   ;;
   *)
     USAGE "Invalid-arguments"
-    ;;
   esac
 
   if [[ -z "$COMPONENT" ]]; then
