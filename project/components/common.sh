@@ -12,4 +12,21 @@ rm -rf $LOG_FILE
 info() {
   echo -e "[${B}INFO${N}] $1"
 }
+stat() {
+  case $1 in
+  0)
+    echo -e "[${G}SUCCESS${N} $2 "
+    ;;
+  *)
+    echo -e "[${R}ERROR${N} $2"
+    echo -e "\e this is wrong please refer ${LIG_FILE}"
+    exit 2
+    ;;
+    esac
 
+#  if [ $? -eq 0 ]; then
+#  echo SUCCESS
+#  else
+#    echo ERROR
+#    fi
+}
