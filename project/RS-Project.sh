@@ -36,7 +36,7 @@ if [ $# -lt 1 -o $# -gt 2 ]; then
     ;;
   esac
 
-  if [ -z "$COMPONENT" ]; then
+  if [[ -z "$COMPONENT" ]]; then
 
     WHICH_COMPONENT=all
     else
