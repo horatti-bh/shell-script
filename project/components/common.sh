@@ -9,16 +9,19 @@ N="\e[0m"
 LOG_FILE=/tmp/RS.log
 rm -rf $LOG_FILE
 
+timeStump() {
+  date +%F-%T
+}
 info() {
-  echo -e "[${B}INFO${N}] $1"
+  echo -e "$(timeStump) [${B}INFO${N}] $1"
 }
 STAT() {
   case $1 in
   0)
-    echo -e "[${G}SUCCESS${N}] $2 "
+    echo -e "$(timeStump) [${G}SUCCESS${N}] $2 "
     ;;
   *)
-    echo -e "[${R}ERROR${N}] $2"
+    echo -e "$(timeStump) [${R}ERROR${N}] $2"
     echo -e "\e this is wrong please refer ${LIG_FILE}"
     exit 2
     ;;
