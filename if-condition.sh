@@ -12,3 +12,8 @@ if [ "$fit" = "Okay" ]; then
 
   fi
 
+
+if [ $# -ne 3 ]; then
+  echo "usage: $0 Okay|NotOkay yes no"
+  exit 1
+  fi
