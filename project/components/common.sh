@@ -7,6 +7,6 @@ B="\e[34m"
 N="\e[0m"
 
 info() {
-  echo "[${B}INFO${N}] $1"
+  echo -e "[${B}INFO${N}] $1"
 }
 
