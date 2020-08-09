@@ -12,6 +12,10 @@ USAGE() {
     echo "Inavaid argumets"
     USAGE
     ;;
+ invalid-component)
+      echo "Invalid Component Given, Must be one of the following !!"
+      USAGE
+      ;;
 
   *)
     echo -e "\e[33mUsage \e[35m$0 \e[31minstall \e[34mcart|catalogue|frontend|dispatch|payment|ratings|shipping|user|rabbitMQ|mysql|redis|mongodb|\e[36mall(default)\e[0m"
