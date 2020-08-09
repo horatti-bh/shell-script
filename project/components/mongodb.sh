@@ -1,3 +1,4 @@
 #!/bin/bash
 
-echo "hello monagodb"
+source components/common.sh
+info  "hello monagodb"
