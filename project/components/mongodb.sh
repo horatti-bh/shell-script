@@ -15,3 +15,10 @@ if [ $? -eq 0 ]; then
   else
     echo ERROR
     fi
+ info "Installing MONGODB"
+    yum install -y mongodb-org -y &>> ${LOG_FILE}
+if [ $? -eq 0 ]; then
+  echo SUCCESS
+  else
+    echo ERROR
+    fi
