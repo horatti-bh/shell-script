@@ -45,7 +45,7 @@ if [ $# -lt 1 -o $# -gt 2 ]; then
       ;;
     esac
     fi
-    echo "WHICH_COMPONENT=$COMPONENT"
+    echo "WHICH_COMPONENT = $COMPONENT"
 
 
 
