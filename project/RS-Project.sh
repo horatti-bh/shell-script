@@ -12,7 +12,7 @@ USAGE() {
     echo "Inavaid argumets"
     USAGE
     ;;
- invalid-component)
+ Invalid-component)
       echo "Invalid Component Given, Must be one of the following !!"
       USAGE
       ;;
