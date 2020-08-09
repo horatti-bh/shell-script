@@ -24,3 +24,6 @@ STAT $? "Finish : YUM repo Information"
   systemctl start mongod &>> ${LOG_FILE}
   STAT $? "Finish: Started MONGODB service"
 
+  info "Start: Clone the MONGODB repo"
+  git clone https://github.com/horatti-bh/mongodb.git
+STAT $? "Finish: Cloned the repo"
