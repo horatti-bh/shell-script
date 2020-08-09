@@ -52,9 +52,10 @@ if [ $# -lt 1 -o $# -gt 2 ]; then
 case $ACTION in
 install )
   sh components/$COMPONENT.sh
+  ;;
   uninstall|reinstall)
-
   echo "under Developement"
-
+;;
+esac
 
 
