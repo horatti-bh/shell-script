@@ -16,4 +16,14 @@ if [ "$fit" = "Okay" ]; then
 if [ $# -ne 3 ]; then
   echo "usage: $0 Okay|NotOkay yes no"
   exit 1
+   fi
+
+proccesor=$(ps -ef | grep ssh | grep -v grep | wc -l)
+
+if [ "proccesor" -gt 0 ]; then
+
+  echo "check the proccess number Total: $proccesor "
+
+
   fi
+
