@@ -22,7 +22,7 @@ proccesor=$(ps -ef | grep ssh | grep -v grep | wc -l)
 
 if [ "proccesor" -gt 0 ]; then
 
-  echo "check the proccess number Total: $proccesor "
+  echo "check the proccess number Total = $proccesor "
 
 
   fi
