@@ -12,6 +12,7 @@ USAGE() {
     echo "Inavaid argumets"
     USAGE
     ;;
+
   *)
     echo -e "\e[33mUsage \e[35m$0 \e[31minstall \e[34mcart|catalogue|frontend|dispatch|payment|ratings|shipping|user|rabbitMQ|mysql|redis|mongodb|\e[36mall(default)\e[0m"
 exit 1
@@ -30,4 +31,22 @@ if [ $# -lt 1 -o $# -gt 2 ]; then
     USAGE "Invalid-arguments"
     ;;
   esac
+
+  if [ -z "$COMPONENT" ]; then
+
+    WHICH_COMPONENT=all
+    else
+      case $COMPONENT in
+      cart|catalogue|frontend|dispatch|payment|ratings|shipping|user|rabbitMQ|mysql|redis|mongodb)
+      WHICH_COMPONENT=$COMPONENT
+      ;;
+    *)
+      USAGE Invalid-component
+      ;;
+    esac
+    f1
+    echo "WHICH_COMPONENT=$COMPONENT"
+
+
+
 
