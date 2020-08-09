@@ -44,7 +44,7 @@ if [ $# -lt 1 -o $# -gt 2 ]; then
       USAGE Invalid-component
       ;;
     esac
-    f1
+    fi
     echo "WHICH_COMPONENT=$COMPONENT"
 
 
