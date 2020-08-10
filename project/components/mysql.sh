@@ -10,4 +10,10 @@ if [[ $? -eq 0 ]]; then
   else
      wget -qO- https://downloads.mysql.com/archives/get/p/23/file/mysql-5.7.28-1.el7.x86_64.rpm-bundle.tar | tar -x
  STAT $? "Finish: Finished downloading MYSQL"
+ info "start: Installing the MYSQL"
+yum install mysql-community-client-5.7.28-1.el7.x86_64.rpm \
+              mysql-community-common-5.7.28-1.el7.x86_64.rpm \
+              mysql-community-libs-5.7.28-1.el7.x86_64.rpm \
+              mysql-community-server-5.7.28-1.el7.x86_64.rpm -y &>> ${LOG_FILE}
+STAT $? "Finish: MYSQL installation finished"
   fi
