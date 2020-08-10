@@ -25,12 +25,15 @@ STAT $? "Finish: MYSQL installation finished"
   STAT $? "Finish: Started mysql service"
 
 sleep 10
+echo 'show databases' | mysql -uroot -ppassword &>/dev/null
+if [[ $? -ne 0 ]]; then
+
 info "Start: Resetting mysql password"
 MYSQL_TMP_PASSWORD=$(cat /var/log/mysqld.log | grep 'temporary password' | tail -1 | awk '{print $NF}')
 echo -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass@1';\nuninstall plugin validate_password;\nALTER USER 'root'@'localhost' IDENTIFIED BY 'password';" >/tmp/remove-plugin.sql
 mysql --connect-expired-password -uroot -p${MYSQL_TMP_PASSWORD} </tmp/remove-plugin.sql &>> ${LOG_FILE}
 STAT $? "Finish: reset password"
-
+fi
 info "Start: Clone the mysql repo"
 CLONE mysql &>> ${LOG_FILE}
 STAT $? "Finish: Finished cloning the mysql repository"
