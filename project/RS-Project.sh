@@ -20,6 +20,10 @@ normal-user)
   echo " user don't have admin access"
   USAGE
   ;;
+git-credentails)
+  echo "git credentails are missing, export GIT_USERNAME and GIT_PASSWORD to the script"
+  USAGE
+  ;;
   *)
     echo -e "\e[33mUsage \e[35m$0 \e[31minstall \e[34mcart|catalogue|frontend|dispatch|payment|ratings|shipping|user|rabbitMQ|mysql|redis|mongodb|\e[36mall(default)\e[0m"
 exit 1
@@ -55,6 +59,11 @@ ID_USER=$(id -u)
 if [[ ${ID_USER} -ne 0 ]]; then
   USAGE normal-user
   fi
+
+if [[ -z "${GIT_USERNAME}" || -z "${GIT_PASSWORD}" ]]; then
+USAGE git-credentails
+fi
+
 
 case $ACTION in
 install )
