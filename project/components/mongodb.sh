@@ -29,8 +29,14 @@ CLONE mongodb &>> ${LOG_FILE}
 STAT $? "Finish: Finished cloning the MONGODB repository"
 
 info "Start: Loading the Schema"
+echo 'show dbs' | mongo | grep catalogue &>> ${LOG_FILE}
+if [[ $? -ne 0 ]]; then
 mongo /tmp/mongodb/catalogue.js &>> ${LOG_FILE}
+fi
+echo 'show dbs' | mongo | grep users &>> ${LOG_FILE}
+if [[ $? -ne 0 ]]; then
 mongo /tmp/mongodb/users.js &>> ${LOG_FILE}
+fi
 STAT $? "Finish: Loaded Schema"
 #mkdir -p /tmp/mongobd
 #  git clone https://github.com/horatti-bh/mongodb.git /tmp/mongobd
