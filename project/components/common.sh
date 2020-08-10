@@ -34,7 +34,7 @@ STAT() {
       rm -rf /tmp/${COMPONENT}
       fi
     mkdir -p /tmp/${COMPONENT}
-    git clone https://github.com/horatti-bh/${COMPONENT}.git /tmp/${COMPONENT}
+    git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/horatti-bh/${COMPONENT}.git /tmp/${COMPONENT}
    }
 
 
