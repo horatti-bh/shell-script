@@ -26,7 +26,7 @@ STAT $? "Finish: MYSQL installation finished"
 
 sleep 10
 info "Start: Resetting mysql password"
-MYSQL_TMP_PASSWORD=$(cat /var/log/mysqld.log | grep password | tail -1 | awk '{print $NF}')
+MYSQL_TMP_PASSWORD=$(cat /var/log/mysqld.log | grep 'temporary password' | tail -1 | awk '{print $NF}')
 echo -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass@1';\nuninstall plugin validate_password;\nALTER USER 'root'@'localhost' IDENTIFIED BY 'password';" >/tmp/remove-plugin.sql
 mysql --connect-expired-password -uroot -p${MYSQL_TMP_PASSWORD} </tmp/remove-plugin.sql &>> ${LOG_FILE}
 STAT $? "Finish: reset password"
