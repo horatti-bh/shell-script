@@ -13,3 +13,7 @@ info "start: Install the Redis"
 yum install redis -y &>> ${LOG_FILE}
 STAT $? "Finish: Redis installation finished"
 
+ info "Start: Start the Redis Service"
+  systemctl enable redis &>/dev/null
+  systemctl start redis &>> ${LOG_FILE}
+  STAT $? "Finish: Started Redis service"
