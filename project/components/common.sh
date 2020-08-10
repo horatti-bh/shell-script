@@ -26,6 +26,7 @@ STAT() {
     exit 2
     ;;
     esac
+    }
 
   CLONE()  {
     COMPONENT=$1
