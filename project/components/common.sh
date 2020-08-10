@@ -27,9 +27,19 @@ STAT() {
     ;;
     esac
 
+  CLONE()  {
+    COMPONENT=$1
+    if [[ -d "/tmp/${COMPONENT}" ]]; then
+      rm -rf /tmp/${COMPONENT}
+      fi
+    mkdir -p /tmp/${COMPONENT}
+    git clone git clone https://github.com/horatti-bh/${COMPONENT}.git /tmp/${COMPONENT}
+   }
+
+
 #  if [ $? -eq 0 ]; then
 #  echo SUCCESS
 #  else
 #    echo ERROR
 #    fi
-}
+

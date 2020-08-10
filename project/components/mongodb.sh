@@ -24,6 +24,14 @@ STAT $? "Finish : YUM repo Information"
   systemctl start mongod &>> ${LOG_FILE}
   STAT $? "Finish: Started MONGODB service"
 
-#  info "Start: Clone the MONGODB repo"
-#  git clone https://github.com/horatti-bh/mongodb.git
+info "Start: Clone the MONGODB repo"
+CLONE mongodb &>> ${LOG_FILE}
+STAT $? "Finish: Finished cloning the MONGODB repository"
+
+info "Start: Loading the Schema"
+mongo /tmp/mongodb/catalogue.js &>> ${LOG_FILE}
+mongo /tmp/mongodb/users.js &>> ${LOG_FILE}
+STAT $? "Finish: Loaded Schema"
+#mkdir -p /tmp/mongobd
+#  git clone https://github.com/horatti-bh/mongodb.git /tmp/mongobd
 # STAT $? "Finish: Cloned the repo"
