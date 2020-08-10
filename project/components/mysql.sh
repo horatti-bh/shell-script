@@ -19,3 +19,7 @@ yum install mysql-community-client-5.7.28-1.el7.x86_64.rpm \
               mysql-community-server-5.7.28-1.el7.x86_64.rpm -y &>> ${LOG_FILE}
 STAT $? "Finish: MYSQL installation finished"
   fi
+   info "Start: Start the mysql Service"
+   systemctl enable mysqld &>/dev/null
+  systemctl start mysqld &>> ${LOG_FILE}
+  STAT $? "Finish: Started mysql service"
