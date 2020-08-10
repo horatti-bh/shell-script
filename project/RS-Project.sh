@@ -59,8 +59,6 @@ ID_USER=$(id -u)
 if [[ ${ID_USER} -ne 0 ]]; then
   USAGE normal-user
   fi
-echo ${GIT_USERNAME}
-echo ${GIT_PASSWORD}
 
 if [[ -z "${GIT_USERNAME}" || -z "${GIT_PASSWORD}" ]]; then
 USAGE git-credentails
