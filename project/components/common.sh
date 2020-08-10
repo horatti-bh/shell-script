@@ -13,7 +13,7 @@ timeStump() {
   date +%F-%T
 }
 info() {
-  echo -e "$(timeStump) [${B}INFO${N}] $1"
+  echo -e "$(timeStump) [${B}INFO${N}] \t $1"
 }
 STAT() {
   case $1 in
