@@ -30,3 +30,12 @@ MYSQL_TMP_PASSWORD=$(cat /var/log/mysqld.log | grep 'temporary password' | tail 
 echo -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass@1';\nuninstall plugin validate_password;\nALTER USER 'root'@'localhost' IDENTIFIED BY 'password';" >/tmp/remove-plugin.sql
 mysql --connect-expired-password -uroot -p${MYSQL_TMP_PASSWORD} </tmp/remove-plugin.sql &>> ${LOG_FILE}
 STAT $? "Finish: reset password"
+
+info "Start: Clone the mysql repo"
+CLONE mysql &>> ${LOG_FILE}
+STAT $? "Finish: Finished cloning the mysql repository"
+
+info "Start: Loading the Schema"
+mysql -uroot -ppassword </tmp/mysql/ratings.sql &>> ${LOG_FILE}
+mysql -uroot -ppassword </tmp/mysql/shipping.sql &>> ${LOG_FILE}
+STAT $? "Finish: Loaded Schema"
