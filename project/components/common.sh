@@ -29,12 +29,12 @@ STAT() {
     }
 
   CLONE_TMP()  {
-    COMPONENT=$1
-    if [[ -d "/tmp/${COMPONENT}" ]]; then
-      rm -rf /tmp/${COMPONENT}
+    service=$1
+    if [[ -d "/tmp/${service}" ]]; then
+      rm -rf /tmp/${service}
       fi
-    mkdir -p /tmp/${COMPONENT}
-    git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/horatti-bh/${COMPONENT}.git /tmp/${COMPONENT}
+    mkdir -p /tmp/${service}
+    git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/horatti-bh/${service}.git /tmp/${service}
    }
    CLONE_APP(){
      service=$1
