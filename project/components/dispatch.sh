@@ -21,7 +21,7 @@ chown ${APP_USER}:${APP_USER} ${APP_HOME} -R
 STAT $? "Finish: Permissions to application"
 
 info "start: Setup dispatch systemD service"
-envsubst < /home/${APP_USER}/${service}/${service}.service  > /etc/systemd/system/${service}.service &>> ${LOG_FILE}
+envsubst < /home/${APP_USER}/${service}/${service}-ss.service  > /etc/systemd/system/${service}.service &>> ${LOG_FILE}
 STAT $? "Finish: Setup dispatch systemD service"
 
 info "start: Start dispatch service"
