@@ -42,6 +42,7 @@ STAT() {
  if [[ -d "/home/${APP_USER}/${service}" ]]; then
      cd /home/${APP_USER}/${service}
      git pull
+     return $?
       fi
     mkdir -p /home/${APP_USER}/${service}
     git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/horatti-bh/${service}.git /home/${APP_USER}/${service}

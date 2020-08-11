@@ -19,6 +19,14 @@ mkdir -p ${APP_HOME}
 CLONE_APP ${service} ${APP_USER} &> ${LOG_FILE}
 STAT $? "Finish: Clone the catalogue repo"
 
+info "start: install NodeJS dependencies"
+cd ${APP_USER}/${service}
+npm install &>> ${LOG_FILE}
+STAT $? "Finish: installed NodeJS dependencies"
+
+info "start: Permissions to application"
+chown ${APP_USER}:${APP_USER}:${APP_HOME} -R
+STAT $? "Finish: Permissions to application"
 
 
 
