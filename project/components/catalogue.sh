@@ -1,8 +1,8 @@
 #!/bin/bash
 
-export service=catalogue
-export APP_USER=roboshop
-export APP_HOME=/home/${APP_USER}/${service}
+service=catalogue
+ APP_USER=roboshop
+APP_HOME=/home/${APP_USER}/${service}
 
 source components/common.sh
 info  "Setting up catalogue micro service"
@@ -30,7 +30,7 @@ STAT $? "Finish: Permissions to application"
 
 info "start: Setup catalogue systemD service"
 # mkdir -p /var/log/robo-shop/
-envsubst < /home/${APP_USER}/${service}/${service}.service  > /etc/systemd/system/${service}.service &>> ${LOG_FILE}
+cp /home/${APP_USER}/${service}/${service}.service /etc/systemd/system/${service}.service &>> ${LOG_FILE}
 STAT $? "Finish: Setup catalogue systemD service"
 
 info "start: Start catalogue service"
