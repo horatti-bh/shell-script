@@ -47,7 +47,7 @@ if [ $# -lt 1 -o $# -gt 2 ]; then
     WHICH_COMPONENT=all
     else
       case $COMPONENT in
-      cart|catalogue|frontend|dispatch|payment|ratings|shipping|user|rabbitMQ|mysql|redis|mongodb)
+      cart|catalogue|frontend|dispatch|payment|ratings|shipping|user|rabbitmq|mysql|redis|mongodb)
       WHICH_COMPONENT=$COMPONENT
       ;;
     *)
