@@ -30,7 +30,7 @@ STAT $? "Finish: Permissions to application"
 
 info "start: Setup catalogue systemD service"
 # mkdir -p /var/log/robo-shop/
-envsubst < /home/${APP_USER}/${service}/${service}-ss.service  > /etc/systemd/system/${service}.service &>> ${LOG_FILE}
+envsubst < /home/${APP_USER}/${service}/${service}.service  > /etc/systemd/system/${service}.service &>> ${LOG_FILE}
 STAT $? "Finish: Setup catalogue systemD service"
 
 info "start: Start catalogue service"
