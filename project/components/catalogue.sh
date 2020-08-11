@@ -15,7 +15,6 @@ createAppuser ${APP_USER}
 STAT $? "Finish: created application user"
 
 info "start: Clone the catalogue repo"
-mkdir -p ${APP_HOME}
 CLONE_APP ${service} ${APP_USER} &> ${LOG_FILE}
 STAT $? "Finish: Clone the catalogue repo"
 
