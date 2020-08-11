@@ -36,7 +36,7 @@ STAT $? "Finish: Setup catalogue systemD service"
 info "start: Start catalogue service"
 systemctl daemon-reload &>> ${LOG_FILE}
 systemctl enable catalogue &>> ${LOG_FILE}
-systemctl start catalogu &>> ${LOG_FILE}
+systemctl start catalogue &>> ${LOG_FILE}
 STAT $? "Finish: Start catalogue service"
 
 
