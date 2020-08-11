@@ -20,7 +20,7 @@ CLONE_APP ${service} ${APP_USER} &> ${LOG_FILE}
 STAT $? "Finish: Clone the catalogue repo"
 
 info "start: install NodeJS dependencies"
-cd ${APP_USER}/${service}
+cd ${APP_HOME}
 npm install &>> ${LOG_FILE}
 STAT $? "Finish: installed NodeJS dependencies"
 
