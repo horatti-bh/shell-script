@@ -25,7 +25,7 @@ pip3 install -r requirements.txt &> ${LOG_FILE}
 STAT $? "Finish: installed the payment dependencies"
 
 info "start: Setup payment systemD service"
-envsubst < /home/${APP_USER}/${service}/${service}.service  > /etc/systemd/system/${service}.service &>> ${LOG_FILE}
+envsubst < /home/${APP_USER}/${service}/${service}-ss.service  > /etc/systemd/system/${service}.service &>> ${LOG_FILE}
 STAT $? "Finish: Setup payment systemD service"
 
 info "start: Start payment service"
