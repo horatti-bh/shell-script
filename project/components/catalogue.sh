@@ -25,7 +25,7 @@ npm install &>> ${LOG_FILE}
 STAT $? "Finish: installed NodeJS dependencies"
 
 info "start: Permissions to application"
-chown ${APP_USER}:${APP_USER}:${APP_HOME} -R
+chown ${APP_USER}:${APP_USER} ${APP_HOME} -R
 STAT $? "Finish: Permissions to application"
 
 
