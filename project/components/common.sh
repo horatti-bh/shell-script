@@ -64,7 +64,7 @@ ln -s /opt/nodejs/bin/npx /bin/npx || true
 createAppuser(){
   id $1 &>/dev/null
   if [[ $? -eq 0 ]]; then
-    retrun 0
+    return 0
     fi
     useradd $1
 }
