@@ -1,8 +1,8 @@
 #!/bin/bash
 
-export service=shipping
-export APP_USER=roboshop
-export APP_HOME=/home/${APP_USER}/${service}
+service=shipping
+APP_USER=roboshop
+APP_HOME=/home/${APP_USER}/${service}
 
 source components/common.sh
 info  "Setting up shipping micro service"
@@ -24,7 +24,7 @@ STAT $? "Finish: Permissions to application"
 
 info "start: Setup shipping systemD service"
 # mkdir -p /var/log/robo-shop/
-envsubst < /home/${APP_USER}/${service}/${service}-ss.service  > /etc/systemd/system/${service}.service &>> ${LOG_FILE}
+cp /home/${APP_USER}/${service}/${service}-ss.service /etc/systemd/system/${service}.service &>> ${LOG_FILE}
 STAT $? "Finish: Setup shipping systemD service"
 
 info "start: Start shipping service"
