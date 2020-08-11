@@ -36,6 +36,6 @@ info "start: Start cart service"
 systemctl daemon-reload &>> ${LOG_FILE}
 systemctl enable cart &>> ${LOG_FILE}
 systemctl start cart &>> ${LOG_FILE}
-STAT $? "Finish: Start cart service"
+STAT $? "Finish: Start cart  service"
 
 
