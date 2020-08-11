@@ -28,5 +28,15 @@ info "start: Permissions to application"
 chown ${APP_USER}:${APP_USER} ${APP_HOME} -R
 STAT $? "Finish: Permissions to application"
 
+info "start: Setup catalogue systemD service"
+# mkdir -p /var/log/robo-shop/
+cp /home/catalogue/catalogue/catalogue.service /etc/systemd/system/catalogue.service &>> ${LOG_FILE}
+STAT $? "Finish: Setup catalogue systemD service"
+
+info "start: Start catalogue service"
+systemctl daemon-reload &>> ${LOG_FILE}
+systemctl enable catalogue &>> ${LOG_FILE}
+systemctl start catalogu &>> ${LOG_FILE}
+STAT $? "Finish: Start catalogue service"
 
 
