@@ -44,7 +44,7 @@ STAT() {
      git pull
       fi
     mkdir -p /home/${APP_USER}/${service}
-    git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/horatti-bh/${COMPONENT}.git /home/${APP_USER}/${service}
+    git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/horatti-bh/${service}.git /home/${APP_USER}/${service}
    }
    InstallNodeJS() {
      if [[ -e "/bin/node" ]]; then
