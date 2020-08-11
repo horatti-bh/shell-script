@@ -1,7 +1,7 @@
 #!/bin/bash
 
 service=catalogue
- APP_USER=roboshop
+ APP_USER=catalogue
 APP_HOME=/home/${APP_USER}/${service}
 
 source components/common.sh
