@@ -1,8 +1,8 @@
 #!/bin/bash
 
-service=catalogue
-APP_USER=roboshop
-APP_HOME=/home/${APP_USER}/${service}
+export service=catalogue
+export APP_USER=roboshop
+export APP_HOME=/home/${APP_USER}/${service}
 
 source components/common.sh
 info  "Setting up catalogue micro service"
