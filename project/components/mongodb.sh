@@ -25,7 +25,7 @@ STAT $? "Finish : YUM repo Information"
   STAT $? "Finish: Started MONGODB service"
 
 info "Start: Clone the MONGODB repo"
-CLONE mongodb &>> ${LOG_FILE}
+CLONE_TMP mongodb &>> ${LOG_FILE}
 STAT $? "Finish: Finished cloning the MONGODB repository"
 
 info "Start: Loading the Schema"

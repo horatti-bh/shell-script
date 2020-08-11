@@ -35,7 +35,7 @@ mysql --connect-expired-password -uroot -p${MYSQL_TMP_PASSWORD} </tmp/remove-plu
 STAT $? "Finish: reset password"
 fi
 info "Start: Clone the mysql repo"
-CLONE mysql &>> ${LOG_FILE}
+CLONE_TMP mysql &>> ${LOG_FILE}
 STAT $? "Finish: Finished cloning the mysql repository"
 
 info "Start: Loading the Schema"

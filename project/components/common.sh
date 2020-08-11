@@ -28,13 +28,23 @@ STAT() {
     esac
     }
 
-  CLONE()  {
+  CLONE_TMP()  {
     COMPONENT=$1
     if [[ -d "/tmp/${COMPONENT}" ]]; then
       rm -rf /tmp/${COMPONENT}
       fi
     mkdir -p /tmp/${COMPONENT}
     git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/horatti-bh/${COMPONENT}.git /tmp/${COMPONENT}
+   }
+   CLONE_APP(){
+     service=$1
+     APP_USER=$2
+ if [[ -d "/home/${APP_USER}/${service}" ]]; then
+     cd /home/${APP_USER}/${service}
+     git pull
+      fi
+    mkdir -p /home/${APP_USER}/${service}
+    git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/horatti-bh/${COMPONENT}.git /home/${APP_USER}/${service}
    }
    InstallNodeJS() {
      if [[ -e "/bin/node" ]]; then
