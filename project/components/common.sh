@@ -51,7 +51,13 @@ ln -s /opt/nodejs/bin/node /bin/node || true
 ln -s /opt/nodejs/bin/npm /bin/npm  || true
 ln -s /opt/nodejs/bin/npx /bin/npx || true
    }
-
+createAppuser(){
+  id $1 &>/dev/null
+  if [[ $? -eq 0 ]]; then
+    retrun 0
+    fi
+    useradd $1
+}
 
 #  if [ $? -eq 0 ]; then
 #  echo SUCCESS
