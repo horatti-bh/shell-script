@@ -70,7 +70,7 @@ install )
   if [[ "${WHICH_COMPONENT}" == "all" ]]; then
     for component in cart catalogue frontend dispatch payment ratings shipping user rabbitmq mysql redis mongodb; do
       sh components/${component}.sh
-      STAT = $?
+      STAT=$?
       if [[ $STAT -ne 0  ]]; then
         exit $STAT
         fi
